@@ -1,11 +1,13 @@
 # Lista de presença
 
-Esse projeto desktop foi desenvolvido com as seguintes tecnologias:
+Esse projeto desktop foi desenvolvido com as seguintes tecnologias e bibiliotecas:
 
 - ReactJs
 - TypeScript
 - Vite
 - Electron
+- TailWind
+- Radix UI
 
 Feito pela aula da RocketSeat e aprimorado por mim.
 
