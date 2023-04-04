@@ -1,5 +1,7 @@
 # Lista de presença
+
 Esse projeto desktop foi desenvolvido com as seguintes tecnologias:
+
 - ReactJs
 - TypeScript
 - Vite
@@ -32,3 +34,4 @@ npm run build:mac
 
 # For Linux
 npm run build:linux
+```
