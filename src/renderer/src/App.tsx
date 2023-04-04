@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react'
-import './style.css'
-import { CardProps, Card } from '../../components/Card'
+import { CardProps, Card } from './components/Card'
+import AlertDialogDemo from '@renderer/components/ButtonDelete'
+import { Header } from './components/Header'
 
 type ProfileResponse = {
   name: string
@@ -13,7 +14,7 @@ type User = {
 }
 
 // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
-export function Home() {
+export function App() {
   const [studentName, setStudentName] = useState('')
   const [students, setStudents] = useState<CardProps[]>([])
   const [user, setUser] = useState<User>({} as User)
@@ -37,7 +38,6 @@ export function Home() {
       return newStudents
     })
   }
-
   useEffect(() => {
     // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
     async function fetchData() {
@@ -65,19 +65,10 @@ export function Home() {
   }
 
   return (
-    <div className="container">
-      <header>
-        <h1>Lista de Presença</h1>
-
-        <div>
-          <strong>{user.name}</strong>
-          <a href="https://github.com/matheusjurkovich">
-            <img src={user.avatar} alt="Foto de perfil" />
-          </a>
-        </div>
-      </header>
-
+    <div className="flex justify-center items-center flex-col mt-40">
+      <Header name={user.name} avatar={user.avatar} />
       <input
+        className="w-2/4 p-6 rounded-2xl bg-zinc-300 text-black"
         type="text"
         placeholder="Digite o nome..."
         onKeyDown={handleKeyDown}
@@ -86,8 +77,9 @@ export function Home() {
         onChange={(e) => setStudentName(e.target.value)}
       />
 
-      <div className="buttonBox">
+      <div className="flex justify-between w-2/4 gap-4">
         <button
+          className="w-[70%] p-6 font-bold bg-green-600 text-white rounded-2xl my-3 text-base items-center hover:brightness-150"
           type="button"
           // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
           onClick={() => {
@@ -97,9 +89,7 @@ export function Home() {
         >
           Adicionar
         </button>
-        <button type="button" onClick={resetArray}>
-          Limpar
-        </button>
+        <AlertDialogDemo click={resetArray} />
       </div>
 
       {students.map((student) => (
