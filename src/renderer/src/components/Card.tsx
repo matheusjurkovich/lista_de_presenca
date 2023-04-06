@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 export type CardProps = {
   name: string
   time: string

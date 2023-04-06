@@ -1,3 +1,6 @@
+/* eslint-disable prettier/prettier */
+/* eslint-disable react/prop-types */
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 export function Header(props) {
   return (
     <header className="m-4 w-2/4 flex justify-between items-center">

@@ -1,10 +1,13 @@
+/* eslint-disable prettier/prettier */
 import * as AlertDialog from '@radix-ui/react-alert-dialog'
+import { Trash } from '@phosphor-icons/react'
 
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 const AlertDialogDemo = (props) => (
   <AlertDialog.Root>
     <AlertDialog.Trigger asChild>
-      <button className="w-[30%] p-6 font-bold bg-red-600 text-white rounded-2xl my-3 text-base items-center hover:brightness-150">
-        Limpar
+      <button className=" p-6 font-bold bg-red-600 text-white rounded-2xl my-3 text-base items-center hover:brightness-200">
+        <Trash size={32} />
       </button>
     </AlertDialog.Trigger>
     <AlertDialog.Portal>
@@ -24,6 +27,7 @@ const AlertDialogDemo = (props) => (
           </AlertDialog.Cancel>
           <AlertDialog.Action asChild>
             <button
+              // eslint-disable-next-line react/prop-types
               onClick={props.click}
               className="text-red11 bg-red4 hover:bg-red5 focus:shadow-red7 inline-flex h-[35px] items-center justify-center rounded-[4px] px-[15px] font-medium leading-none outline-none focus:shadow-[0_0_0_2px]"
             >

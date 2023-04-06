@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { useState, useEffect } from 'react'
 import { CardProps, Card } from './components/Card'
 import AlertDialogDemo from '@renderer/components/ButtonDelete'
@@ -79,7 +80,7 @@ export function App() {
 
       <div className="flex justify-between w-2/4 gap-4">
         <button
-          className="w-[70%] p-6 font-bold bg-green-600 text-white rounded-2xl my-3 text-base items-center hover:brightness-150"
+          className="w-screen p-6 font-bold bg-green-600 text-white rounded-2xl my-3 text-base items-center hover:brightness-150"
           type="button"
           // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
           onClick={() => {
